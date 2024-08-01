@@ -1,0 +1,85 @@
+#overview .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.overview-image {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-aligns content horizontally */
+    flex-basis: 30%;
+    background-color: rgba(123, 71, 8, 0.299);
+    box-shadow:9px 9px 15px rgba(0, 0, 0, 0.5);  
+    aspect-ratio: 1;
+    margin-bottom: 20px; /* Adds space below each image and button */
+    border-radius: 30px 0 30px 0;
+}
+
+@media (max-width: 756px) {
+    .overview-image {
+        flex-basis: 48%;
+        margin-bottom: 20px; /* Adjusted margin for smaller screens */
+    }
+    #overview .container {
+        justify-content: center;
+        gap: 4%;
+    }
+}
+
+.overview-image a {
+    text-decoration: none; /* Removes underline from links */
+}
+
+.overview-image img {
+    width: 100%; /* Ensure image fits the container width */
+    border-radius: 30px 0 30px 0;
+    box-shadow:5px 5px 10px rgba(0, 0, 0, 0.313); 
+
+}
+
+.see-more-button {
+    display: block;
+    margin-top: 10px; /* Adds space between image and button */
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #553a11d3; /* Button color */
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow:5px 5px 9px rgba(0, 0, 0, 0.5); 
+    transition: background-color 0.3s, transform 0.3s;
+
+
+}
+.plus{
+    display: block;
+    margin-top: 10px; /* Adds space between image and button */
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #553a11d3; /* Button color */
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-bottom: 25px;
+    box-shadow:5px 5px 5px rgba(0, 0, 0, 0.5); 
+
+}
+
+
+.see-more-button:hover {
+    background-color: #553a11d3; /* Darker shade for hover effect */
+    transform: scale(1.05); /* Slightly enlarges button on hover */
+}
+.overview-image:hover::after{
+    visibility: visible;
+    opacity: 1;
+    border-radius: 30PX 0 30PX 0 ;
+
+}
